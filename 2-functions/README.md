@@ -211,8 +211,23 @@ It needs to be a Number
        great tool for this:
 
     ![google geometry answer](google-geometry-answer.gif)
+    
+    
+```js
+var product p = 1;
+
+function power(base, exp) {
+  product = product * base;
+  exp = exp - 1;
+}
+
+return product;
+
+power (10, 2)
+```
 
 ### More Practice
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 Translate the rest of the geometric formulas found <a href="http://www.gbcnv.edu/documents/ASC/docs/00000005.pdf" target="_blank">here</a> into JavaScript functions.
 
