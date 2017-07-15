@@ -239,15 +239,16 @@ function negative() {
    + `guessMyNumber`: Should accept a single numeric argument and compare it to
      a random number between `0` and `5`. It should return one of the following
      strings:
+     - "You guessed my number!" if the argument matches the random number."
+     - "Nope! That wasn't it!" if the argument did not match the random number."
 ```js
 function guessMyNumber(guess) {
   var nun - Math,random() * (10 - 5) + 5 | 0;
   if (guess === num) {
-  return 'You guessed it';
+  return "You guessed my number!" ;
   }
-  return 'try again';
+  return "Nope! That wasn't it!";
 }
 ```
 
-     - "You guessed my number!" if the argument matches the random number.
-     - "Nope! That wasn't it!" if the argument did not match the random number.
+
