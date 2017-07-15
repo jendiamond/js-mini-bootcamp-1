@@ -8,24 +8,30 @@ Before getting started, make sure that you have a JavaScript console open (like 
 
 #### Logical Operators
 
-1. Is the `!` operator a *unary* operator, or *binary* operator?
+1. Is the `!` operator a *unary* operator, or *binary* operator?  
+unary casting operator
 
 2. Evaluate each of the following expressions first on a whiteboard, and then in
    a console:
 
-   ```js
-   !(2 >= 2)
-   !(4 === 4)
-   !(5 !== 5)
-   ```
+```js
+!(2 >= 2)
+=> false
+!(4 === 4)
+=> false
+!(5 !== 5)
+=> true
+```
 
 3. Evaluate each of the following expressions first on a whiteboard, and then in a
    console:
 
-   ```js
-   1 > 2 || 2 > 2 || 3 > 2
-   5 < 5 || 75 < 74
-   ```
+```js
+1 > 2 || 2 > 2 || 3 > 2
+=> true
+5 < 5 || 75 < 74
+=> false
+```
 
 #### Conditionals: `else if` & `else`
 
@@ -47,12 +53,18 @@ Before getting started, make sure that you have a JavaScript console open (like 
    + 'D' >= 60
    + 'F' < 60
 
-   ```js
-   function scoreToGrade(score) {
-     // TODO: your code here
-   }
-   scoreToGrade(95); // => 'A'
-   scoreToGrade(72); // => 'C'
+```js
+function scoreToGrade(score) {
+  var 'A' > 90
+  var 'B' >= 80
+  var 'C' >= 70
+  var 'D' >= 60
+  var 'F' < 60
+  
+  if score
+}
+scoreToGrade(95); // => 'A'
+scoreToGrade(72); // => 'C'
    ```
 
 3. Modify the `scoreToGrade` function so that it returns `'INVALID SCORE'` if
