@@ -41,6 +41,18 @@ unary casting operator
    the previous section so that the person named "Joe" is rejected with an
    appropriate message, regardless of his age.
 
+```js
+function bouncer_blacklist(name, age) {
+  if (name == "Joe" || age <= 20 ) {
+    return "Go home, " +  name + "!"
+    }
+  else {
+    return "Welcome, " +  name + "!"
+  }
+}
+bouncer("Joe")
+```
+
 2. Write a function called `scoreToGrade` that accepts a *number* as a parameter
    and returns a *string* representing a letter grade corresponding to that
    score.
@@ -55,17 +67,30 @@ unary casting operator
 
 ```js
 function scoreToGrade(score) {
-  var 'A' > 90
-  var 'B' >= 80
-  var 'C' >= 70
-  var 'D' >= 60
-  var 'F' < 60
-  
-  if score
+  if (score > 100 || score < 0) {
+    return 'INVALID SCORE';
+  }
+  else if (score  > 90) {
+   return 'A';
+  }
+  else if (score >= 80) {
+   return 'B';
+  }
+  else if (score >= 70) {
+   return 'C';
+  }
+  else if (score >= 60) {
+   return 'D';
+  }
+  else (score < 60) {
+   return 'F'; 
+  }
 }
 scoreToGrade(95); // => 'A'
 scoreToGrade(72); // => 'C'
-   ```
+scoreToGrade(0); // => 'C'
+scoreToGrade(103); // => 'C'
+```
 
 3. Modify the `scoreToGrade` function so that it returns `'INVALID SCORE'` if
    the score is greater than `100` or less than `0`.
@@ -85,6 +110,14 @@ scoreToGrade(72); // => 'C'
    + **Water Sports:** surfing, sailing, paddle boarding, swimming
    + **Team Sports:** basketball, baseball, football (American or everywhere
      else), etc.
+
+```js
+function whatToDoOutside(temperature, condition) {
+  if() {
+  }
+  else if }
+}
+```
 
 2. The `guessMyNumber` function from the **Booleans & Conditionals** module
    (**More Practice** section) accepts a guess `n` and checks it against a
