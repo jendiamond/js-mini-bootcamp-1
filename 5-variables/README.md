@@ -9,16 +9,26 @@ Before getting started, make sure that you have a JavaScript console open (like 
 1. Fix each of the following variable declarations in a console -- some are
    syntactically invalid, some are disobey style guidelines, and some are just
    weird.
-
-   ```js
+WRONG
+```js
    var "animal" = "monkey";
    var "monkey" = animal;
-   var x= 15;
+   var x = 15;
    var y =10;
    var var = "huh?";
    var true = false;
    var isTenEven = 10 % 2 = 0;
-   ```
+```
+RIGHT
+```js
+   var animal = "monkey";
+   var monkey = animal;
+   var x= 15;
+   var y = 10;
+   var = "huh?";
+   var true = false; reserved word
+   var isTenEven = 10 % 2 === 0;
+```
 
 2. Perform the following in the console:
 
@@ -27,6 +37,12 @@ Before getting started, make sure that you have a JavaScript console open (like 
    + Have a middle name? If so, repeat the process.
    + Now, create a variable `fullName` and assign your full name to it by using
      the above variables.
+
+```js
+var firstName = "Jen"
+var lastName = "Diamond"
+var fullName = firstName + " " + lastName
+```
 
 3. For each of the following code blocks, **use a whiteboard (or a piece of paper)** to reason about
    what the value of `x` is supposed to be on the last line. Once you have
@@ -37,14 +53,14 @@ Before getting started, make sure that you have a JavaScript console open (like 
    ```js
    var x = 5;
    x + 10;
-   x; // => ???
+   x; // => 5
    ```
 
    ```js
    var x = 17;
    x = (x + 1) / 2;
    x * 4;
-   x; // => ???
+   x; // => 9
    ```
 
    ```js
@@ -52,33 +68,52 @@ Before getting started, make sure that you have a JavaScript console open (like 
    var y = 20;
    x = y;
    y = y + 7;
-   x; // => ???
+   x; // => 20
    ```
 
    ```js
    var x = 10;
    var y = 5;
-   x = (x * 4) - 3;
-   x + 17;
-   x = x + y;
-   x; // => ???
+   x = (x * 4) - 3; // => ((10 * 4) - 3) = (40 - 3) = (37)
+   x + 17; // (37 + 17) = 54
+   x = x + y; (37 + 5)
+   x; // => 42
    ```
 
 4. Write a function called `counter` that, when invoked, always returns a number
    that is *one more* than the previous invocation. For instance:
 
-   ```js
-   function counter() {
-     // TODO: your code here
-   }
-   counter(); // => 1
-   counter(); // => 2
-   counter(); // => 3
-   // etc.
-   ```
-
    **HINT:** You'll need a variable for this. *Where* should the variable be
    declared?
+
+```js
+var count = 0;
+   
+function counter() {
+  count += 1;
+  return count;
+}
+counter(); // => 1
+counter(); // => 2
+counter(); // => 3
+```
+
+//closure - lexical scope - 
+```js
+function counterMaker() {
+  var count = 0;
+  
+  return function addOneToCount() {
+    count += 1;
+    return count;
+  }
+ }
+ 
+var count_up = counterMaker(); // => 1
+   count_up(); // => 2
+   count_up(); // => 3
+```
+
 
 ### More Practice
 
