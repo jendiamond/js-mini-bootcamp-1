@@ -142,13 +142,11 @@ max(25, 68)
    smaller one.
 
 ```js
-function min() {
+function min(num1, num2) {
   if (num1 < num2) {
     return num1
   }
-  else {
-    return num2
-  }
+  return num2
 }
 
 min(94328759473,4357543987)  
@@ -160,22 +158,44 @@ min(36,745)
 4. Write functions `larger` and `smaller` that each accept two strings as
    arguments, and return the *larger* and *smaller* strings, respectively.
 
+```js
+function larger(str1, str2) {
+  if (str1.length > str2.length) return str1 {
+    return strb;
+}
+
+larger(94328759473,4357543987)  
+=> 
+larger(36,745)  
+=> 
+
+function smaller(str1, str2) {
+  if (str1.length < str2.length) return str1 {
+    return strb;
+}
+
+smaller(94328759473,4357543987)  
+=> 
+smaller(36,745)  
+=> 
+```
+
 ### More Practice
 
 1. Fill in the `???` with the following operators or values to make the statements
    output the expected Boolean value.
 
    ```js
-   106 ??? 12
+   106 > 12
    // => false
 
-   "wiz" ??? "wiz"
+   "wiz" === "wiz"
    // => true
 
-   7 * 7  ??? 49
+   7 * 7  === 49
    // => true
 
-   12 ??? (24 / 2)
+   12 === (24 / 2)
    // => false
 
    (20 % 2) <= ???
@@ -192,6 +212,22 @@ min(36,745)
     + `odd`: the opposite of the above.
     + `positive`: returns `true` if its argument is positive, and `false` otherwise.
     + `negative`: the opposite of the above.
+    
+function even() {
+  return num % 2 === 0;
+}
+
+function odd() {
+  return !even(num);
+}
+
+function positive() {
+    
+}
+
+function negative() {
+    
+}
 
 3. A couple of other useful built-in mathematical functions are `Math.random`,
    `Math.floor` and `Math.ceil`. Look these functions up on
@@ -203,6 +239,15 @@ min(36,745)
    + `guessMyNumber`: Should accept a single numeric argument and compare it to
      a random number between `0` and `5`. It should return one of the following
      strings:
+```js
+function guessMyNumber(guess) {
+  var nun - Math,random() * (10 - 5) + 5 | 0;
+  if (guess === num) {
+  return 'You guessed it';
+  }
+  return 'try again';
+}
+```
 
      - "You guessed my number!" if the argument matches the random number.
      - "Nope! That wasn't it!" if the argument did not match the random number.
