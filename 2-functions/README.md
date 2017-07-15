@@ -19,14 +19,38 @@ Before getting started, make sure that you have a JavaScript console open (like 
    square(8 / 2)
    square(2 + 17);
    square(square(15));
-   ```
+```
+   > 102  
+   > 15929  
+   > 16  
+   > 361  
+   > 50625  
 
 2. Write a sentence in plain English describing how `square(square(15))` is
    evaluated.
-
+ + The function square is given the argument of the square of 15.  
+ + The expression in the argument calls the square function 
+ + The function calculates that by running the function 15 * 15 which returns 225. 
+ + Then the argument of the function square has the value of 225.
+ + The function calculates that by running the function 225 * 225
+ + The value 50625 is returned
+ 
 3. Rename the parameter to `square` in your above code to `monkey`, and
-   rename the uses of that parameter in the body to `monkey` as well. Will the
-   function `square` still work? Why or why not?
+   rename the uses of that parameter in the body to `monkey` as well. 
+   
+   Will the function `square` still work? Yes.  
+   Why or why not? As long as all the values that were square are changed to monkey. You can name it anything.
+```js
+   function monkey(num){
+      return num * num;
+   }
+   
+   monkey(10) + 2;
+   monkey(100) + monkey(77);
+   monkey(8 / 2)
+   monkey(2 + 17);
+   monkey(monkey(15));
+```
 
 4. What is wrong with the following definitions of `square`? Write a sentence or
    two describing the issue(s); then, try copying the erroneous examples into a
@@ -38,20 +62,27 @@ Before getting started, make sure that you have a JavaScript console open (like 
    function square(monkey) {
      return x * x;
    }
+```
+x is not defined
 
+```
    function square(5) {
      return 5 * 5;
    }
-
+```
+The parameter is hard coded.
+```
    function square("x") {
      return "x" * "x";
    }
-   ```
+```
+The parameter is a string and we are trying to get the square of the function.  
+It needs to be a Number
 
 5. Fix the invalid syntax in the following functions (you can copy and paste these
    invalid definitions into your console and then edit them there):
 
-   ```js
+```js
    func square1(x {
      return x * x;
    }
@@ -62,12 +93,26 @@ Before getting started, make sure that you have a JavaScript console open (like 
 
    function (x) square3 {
      return x * x;
-   ```
+```
+
+```js
+   func square1(x) {
+     return x * x;
+   }
+
+   functionsquare2 (x) {
+     return x * x;
+   }
+
+   function square3 (x)  {
+     return x * x;
+   }
+```
 
 6. The following functions exhibit poor style -- fix these issues using the
    original version of `square` as a reference.
 
-   ```js
+```js
    function square(x){return x*x;}
 
    function square (x) { return x *x;
@@ -77,33 +122,64 @@ Before getting started, make sure that you have a JavaScript console open (like 
    {
    return x * x;
    }
-   ```
+```
+
+```js
+   function square(x) {
+     return x*x;
+   }
+
+   function square(x) { 
+     return x *x;
+   }
+
+   function square(x) {
+     return x * x;
+   }
+```
 
 7. Complete the function `cube` that returns the cube of x:
 
-  ```js
+```js
   function cube(x) {
-    // your code here
+    x * x * x
   }
-  ```
+```
 
 8. Complete the function `fullName` that should take two parameters, `firstName`
    and `lastName`, and returns the `firstName` and `lastName` concatenated
    together with a space in between.
 
-  ```js
+```js
   // don't forget the parameters!
-  function fullName() {
-    // your code here
+  function fullName(firstName, lastName) {
+    return firstName + " " + lastName
   }
   fullName("John", "Doe") // => "John Doe"
-  ```
+```
 
 9. Write a function `average` that takes two numbers as input (parameters), and
    returns the average of those numbers.
 
+```js
+  function average(num1, num2) {
+    return (num1 + num2) / 2
+  }
+  
+  average(5,9) // => 
+```
+
 10. Write a function `greeter` that takes a name as an argument and *greets*
     that name by returning something along the lines of `"Hello, <name>!"`
+    
+
+```js
+  function greeter(name) {
+    return "Hello," + " " + name + "!"
+  }
+  
+  greeter("Jen") 
+```    
 
 11. Using the document found at <a href="http://www.gbcnv.edu/documents/ASC/docs/00000005.pdf" target="_blank">this link</a>, translate the first page of geometric
     formulas into JavaScript functions.
